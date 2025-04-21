@@ -1,0 +1,5 @@
+{
+    "domain": "my-shared-domain",
+    "minMuleVersion": "4.8.3",
+    "javaSpecificationVersions": ["17"]
+}

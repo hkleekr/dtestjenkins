@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+
+	<flow name="dtestjenkinsFlow" doc:id="fbbbca37-827d-462a-8b99-81e53330818e" >
+		
+		<http:listener doc:name="Listener" doc:id="095aca8f-80d5-4f41-ab3c-d3e99e1da0a3" config-ref="HTTP_Listener_config_domain" path="/jen"/>
+		<set-payload value="please good good" doc:name="Set Payload" doc:id="927fb723-65b5-4cb0-a18a-2746bda4dde7" />
+		<set-variable value="#[now()]" doc:name="Set Variable:currentTime" doc:id="21a54c36-3c59-4934-91e9-fbb484c4a386" variableName="currentTime"/>
+		<set-variable value="i can do this" doc:name="Set Variable:shout" doc:id="e1501a0f-fa85-4af0-9c28-99d4cd258bd0" variableName="shout"/>
+		<ee:transform doc:name="Transform Message" doc:id="da713ccf-aec0-4490-8ce9-2ce0c5d6f3cb" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"attributes": attributes,
+	"curr": vars.currentTime as String {format: "yyyy-MM-dd HH:mm:ss"},
+	"comm": vars.shout,
+	"payload": payload
+}	]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="a61e08aa-9205-4323-9b70-eb45633948e8" message="#[payload]"/>
+	</flow>
+</mule>
