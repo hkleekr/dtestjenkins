@@ -37,8 +37,8 @@
 				<configuration>
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>  <!-- Jenkins에서 넘겨주는 값 -->
-						<username>${mule.deploy.username}</username>  <!-- Jenkins에서 넘겨주는 값 -->
-    					<password>${mule.deploy.password}</password>  <!-- Jenkins에서 넘겨주는 값 -->
+						<username>hyekyung</username>  <!-- Jenkins에서 넘겨주는 값 -->
+    					<password>KUkjt@RuU4s9!p$</password>  <!-- Jenkins에서 넘겨주는 값 -->
 					</agentDeployment>
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
