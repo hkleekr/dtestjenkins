@@ -25,8 +25,14 @@
 					<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 				</pluginRepository>
 			</pluginRepositories>
-		</profile>
-	
-	
+		</profile>	
 	</profiles>
+	
+	<servers>
+		<server>
+			<id>mule</id>
+			<username>hyekyung</username>
+			<password>KUkjt@RuU4s9!p$</password>
+		</server>	
+	</servers>
 </settings> 

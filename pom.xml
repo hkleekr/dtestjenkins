@@ -35,11 +35,14 @@
 				<extensions>true</extensions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
+					<deploymentType>HYBRID</deploymentType>
+					<target>deploytest-jenkins-1</target>
+					<applicationName>dtestjenkins</applicationName>
+					<environment>sandbox</environment>
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>  <!-- Jenkins에서 넘겨주는 값 -->
-						<username>hyekyung</username>  <!-- Jenkins에서 넘겨주는 값 -->
-    					<password>KUkjt@RuU4s9!p$</password>  <!-- Jenkins에서 넘겨주는 값 -->
 					</agentDeployment>
+					<server>mule</server>
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
 			</plugin>
