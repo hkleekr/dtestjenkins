@@ -29,30 +29,13 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
-			<!-- maven install plugin 추가 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-install-plugin</artifactId>
-				<version>3.1.1</version>
-			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>package</goal>
-						</goals>
-					</execution>
-				</executions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
-					<!-- Specify ZIP file creation -->
-                	<outputFile>${project.build.directory}/${project.build.finalName}.zip</outputFile>
-                	<archiveType>zip</archiveType>
 					<deploymentType>HYBRID</deploymentType>
 					<target>deploytest-jenkins-1</target>
 					<applicationName>dtestjenkins</applicationName>
@@ -64,6 +47,25 @@
 					<server>mule</server>
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>rename-to-zip</id>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<copy file="${project.build.directory}/${project.build.finalName}-mule-application.jar"
+                					  tofile="${project.build.directory}/${project.build.finalName}-mule-application.zip"/>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
