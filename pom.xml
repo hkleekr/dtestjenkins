@@ -33,6 +33,14 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>package</goal>
+						</goals>
+					</execution>
+				</executions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
 					<deploymentType>HYBRID</deploymentType>
