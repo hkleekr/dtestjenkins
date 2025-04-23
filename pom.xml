@@ -40,7 +40,8 @@
 					<applicationName>dtestjenkins</applicationName>
 					<environment>sandbox</environment>
 					<agentDeployment>
-						<uri>${mule.deploy.uri}</uri>  <!-- Jenkins에서 넘겨주는 값 -->
+						<uri>${mule.deploy.uri}</uri>
+						<!-- Jenkins에서 넘겨주는 값 -->
 					</agentDeployment>
 					<server>mule</server>
 				</configuration>
@@ -68,6 +69,18 @@
 			<version>1.0.0-SNAPSHOT</version>
 			<classifier>mule-domain</classifier>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.connectors</groupId>
+			<artifactId>mule-cloudhub-connector</artifactId>
+			<version>1.2.0</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.connectors</groupId>
+			<artifactId>mule-workday-connector</artifactId>
+			<version>16.3.0</version>
+			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
 
