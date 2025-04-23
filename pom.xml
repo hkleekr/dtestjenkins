@@ -5,6 +5,7 @@
 	<groupId>2437c48f-31ee-4850-9e15-f6942f7590eb</groupId>
 	<artifactId>dtestjenkins</artifactId>
 	<version>1.0.4</version>
+
 	<packaging>mule-application</packaging>
 
 	<name>dtestjenkins</name>
@@ -28,6 +29,12 @@
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
 			</plugin>
+			<!-- maven install plugin 추가 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.1.1</version>
+			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -43,6 +50,9 @@
 				</executions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
+					<!-- Specify ZIP file creation -->
+                	<outputFile>${project.build.directory}/${project.build.finalName}.zip</outputFile>
+                	<archiveType>zip</archiveType>
 					<deploymentType>HYBRID</deploymentType>
 					<target>deploytest-jenkins-1</target>
 					<applicationName>dtestjenkins</applicationName>
