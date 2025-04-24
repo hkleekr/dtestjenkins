@@ -1,5 +1,14 @@
 {
-    "domain": "my-shared-domain",
-    "minMuleVersion": "4.8.3",
-    "javaSpecificationVersions": ["17"]
+  "name": "dtestjenkins",
+  "domain": "my-shared-domain",
+  "minMuleVersion": "4.8.3",
+  "requiredProduct": "MULE_EE",
+  "javaSpecificationVersions": ["17"],
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": []
+    }
+  }
 }
