@@ -37,12 +37,11 @@
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
 					<deploymentType>HYBRID</deploymentType>
-					<target>deploytest-jenkins-1</target>
+					<target>${target}</target>  <!-- Jenkins에서 넘겨주는 값 -->
 					<applicationName>dtestjenkins</applicationName>
 					<environment>sandbox</environment>
 					<agentDeployment>
-						<uri>${mule.deploy.uri}</uri>
-						<!-- Jenkins에서 넘겨주는 값 -->
+						<uri>${mule.deploy.uri}</uri>   <!-- Jenkins에서 넘겨주는 값 -->
 					</agentDeployment>
 					<server>mule</server>
 				</configuration>
