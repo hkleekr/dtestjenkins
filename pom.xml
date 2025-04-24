@@ -55,14 +55,18 @@
   		        <version>3.1.1</version>
 		        <executions>
 		        	<execution>
-		            	<phase>install</phase>
-		          		<goals><goal>install-file</goal></goals>
+		        		<id>install-zip</id>
+		            	<phase>verify</phase>
+		          		<goals>
+		          			<goal>install-files</goal>
+		          		</goals>
 		          		<configuration>
 		            		<file>${project.build.directory}/${project.build.finalName}.zip</file>
 		            		<groupId>${project.groupId}</groupId>
 		            		<artifactId>${project.artifactId}</artifactId>
 		            		<version>${project.version}</version>
 		            		<packaging>zip</packaging>
+		            		<generatePom>true</generatePom>
 		          		</configuration>
 		        	</execution>
 		      	</executions>
