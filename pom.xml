@@ -20,7 +20,6 @@
 		<tags/>
 		<categories>[]</categories>
 		<fields>[]</fields>
-		<mule.tools.version>1.7</mule.tools.version>
 	</properties>
 
 	<build>
@@ -32,9 +31,8 @@
 			</plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
-				<!-- <artifactId>mule-maven-plugin</artifactId>  -->
-				<artifactId>mule-app-maven-plugin</artifactId>
-				<version>${mule.tools.version}</version>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
