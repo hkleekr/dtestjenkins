@@ -47,7 +47,26 @@
 					<server>mule</server>
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
-			</plugin>		
+			</plugin>	
+			<!-- .zip을 maven 기본 아티팩트로 인식하게 하는 플러그인 -->	
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-install-plugin</artifactId>
+  		        <version>3.1.1</version>
+		        <executions>
+		        	<execution>
+		            	<phase>install</phase>
+		          		<goals><goal>install-file</goal></goals>
+		          		<configuration>
+		            		<file>${project.build.directory}/${project.build.finalName}.zip</file>
+		            		<groupId>${project.groupId}</groupId>
+		            		<artifactId>${project.artifactId}</artifactId>
+		            		<version>${project.version}</version>
+		            		<packaging>zip</packaging>
+		          		</configuration>
+		        	</execution>
+		      	</executions>
+		    </plugin>
 			
 		</plugins>
 	</build>
