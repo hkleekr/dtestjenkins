@@ -47,49 +47,8 @@
 					<server>mule</server>
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>rename-to-zip</id>
-						<phase>package</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<target>
-								<copy file="${project.build.directory}/${project.build.finalName}-mule-application.jar"
-                					  tofile="${project.build.directory}/${project.build.finalName}-mule-application.zip"/>
-							</target>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.2.0</version>
-				<executions>
-					<execution>
-						<id>attach-zip-artifact</id>
-						<phase>package</phase>
-						<goals>
-							<goal>attach-artifact</goal>
-						</goals>
-						<configuration>
-							<artifacts>
-								<artifact>
-									<file>${project.build.directory}/${project.build.finalName}-mule-application.zip</file>
-									<type>zip</type>
-									<classifier>mule-app</classifier>
-								</artifact>
-							</artifacts>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+			</plugin>		
+			
 		</plugins>
 	</build>
 
