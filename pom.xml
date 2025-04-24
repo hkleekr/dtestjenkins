@@ -58,7 +58,7 @@
 		        		<id>install-zip</id>
 		            	<phase>verify</phase>
 		          		<goals>
-		          			<goal>install-files</goal>
+		          			<goal>install-file</goal>
 		          		</goals>
 		          		<configuration>
 		            		<file>${project.build.directory}/${project.build.finalName}.zip</file>
