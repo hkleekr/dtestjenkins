@@ -64,7 +64,20 @@
 		          		</configuration>
 		        	</execution>
 		      	</executions>
-		    </plugin>			
+		    </plugin>
+		    <!-- 배포 플러그인 -->		
+		    <plugin>
+		    	<groupId>org.mule.tools.maven</groupId>
+		    	<artifactId>mule-maven-plugin</artifactId>
+		    	<version>${mule.maven.plugin.version}</version>
+		    	<executions>
+		    		<execution>
+		    			<goals>
+		    				<goal>deploy</goal>
+		    			</goals>
+		    		</execution>
+		    	</executions>
+		    </plugin>
 		</plugins>
 	</build>
 
