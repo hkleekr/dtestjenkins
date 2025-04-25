@@ -47,7 +47,7 @@
 						<provider>mule</provider>
 						<target>Azure-AWS-Cluster</target>
 						<environment>Sandbox</environment>
-						<applicationName>deploytest-jenkins-1</applicationName>
+						<!-- <applicationName>deploytest-jenkins-1</applicationName>  -->
 					</deployment>
 					 <!-- 
 					 <standaloneDeployment>
