@@ -99,7 +99,7 @@
 			<artifactId>mule-workday-connector</artifactId>
 			<version>16.3.0</version>
 			<classifier>mule-plugin</classifier>
-		</dependency>		
+		</dependency>				
 	</dependencies>
 
 	<repositories>

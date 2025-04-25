@@ -25,18 +25,6 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
-		<profile>
-			<id>vm1_azure</id>
-			<properties>
-				<mule.deploy.uri>http://20.196.66.2:8081</mule.deploy.uri>
-			</properties>
-		</profile>	
-		<profile>
-			<id>vm2_aws</id>
-			<properties>
-				<mule.deploy.uri>http://13.209.83.213:8081</mule.deploy.uri>
-			</properties>
-		</profile>	
 	</profiles>
 	
 	<servers>
