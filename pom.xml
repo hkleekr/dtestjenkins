@@ -49,8 +49,7 @@
 						<businessGroup>${anypoint.businessGroup}</businessGroup>
 					</anypointPlatform>
 					<agentDeployment>
-					<!-- <uri>${mule.deploy.uri}</uri>    -->
-						<target>${anypoint.target}</target>
+						<uri>${mule.deploy.uri}</uri>
 						<applicationName>${app.name}</applicationName>
 					</agentDeployment>  					
 				</configuration>
