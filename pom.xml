@@ -37,24 +37,9 @@
 				<extensions>true</extensions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
-				<!-- 
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>   
-					</agentDeployment>  
-					-->
-					
-					<deployment>
-						<provider>mule</provider>
-						<target>Azure-AWS-Cluster</target>
-						<environment>Sandbox</environment>
-						<!-- <applicationName>deploytest-jenkins-1</applicationName>  -->
-					</deployment>
-					 <!-- 
-					 <standaloneDeployment>
-					 	<muleHome>${mule.home.test}</muleHome>
-					 	<muleVersion>${app.runtime}</muleVersion>
-					 </standaloneDeployment>
-					 -->
+					</agentDeployment>  					
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
 			</plugin>	
