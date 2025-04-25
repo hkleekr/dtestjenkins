@@ -17,6 +17,7 @@
 
 		<app.runtime>4.8.3</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<mule.home.test></mule.home.test>
 		<tags/>
 		<categories>[]</categories>
 		<fields>[]</fields>
@@ -39,13 +40,21 @@
 				<!-- 
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>   
-					</agentDeployment>  -->
+					</agentDeployment>  
+					-->
+					
 					<deployment>
 						<provider>mule</provider>
 						<target>Azure-AWS-Cluster</target>
 						<environment>Sandbox</environment>
-						<applicationName>dtestjenkins</applicationName>
+						<applicationName>deploytest-jenkins-1</applicationName>
 					</deployment>
+					 <!-- 
+					 <standaloneDeployment>
+					 	<muleHome>${mule.home.test}</muleHome>
+					 	<muleVersion>${app.runtime}</muleVersion>
+					 </standaloneDeployment>
+					 -->
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
 			</plugin>	
