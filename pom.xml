@@ -43,7 +43,7 @@
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
 					<agentDeployment>
-						<uri>${mule.deploy.uri}</uri>
+						<uri>http://20.196.66.2:9999</uri>
 						<applicationName>${app.name}</applicationName>
 					</agentDeployment>  					
 				</configuration>
