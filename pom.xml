@@ -42,10 +42,15 @@
 				<extensions>true</extensions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
-					<agentDeployment>
-						<uri>http://20.196.66.2:9999</uri>
-						<applicationName>${app.name}</applicationName>
-					</agentDeployment>  					
+					<deployTarget>
+				        <type>standalone</type>
+				        <standaloneDeployment>
+				            <uri>http://${mule.server}:${mule.port}/</uri>
+				            <username>${anypoint.username}</username>
+				            <password>${anypoint.password}</password>
+				            <applicationName>${app.name}</applicationName>
+				        </standaloneDeployment>
+				    </deployTarget>		
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
 			</plugin>	
