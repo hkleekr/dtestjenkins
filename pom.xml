@@ -17,12 +17,13 @@
 
 		<app.runtime>4.8.3</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
-		<anypoint.username>hyekyung</anypoint.username>
+		<!-- <anypoint.username>hyekyung</anypoint.username>
 		<anypoint.password>KUkjt@RuU4s9!p$</anypoint.password>
 		<anypoint.environment>Sandbox</anypoint.environment>
 		<anypoint.businessGroup>KD Test Group</anypoint.businessGroup>
 		<anypoint.target>Azure-AWS-Cluster</anypoint.target>
-		<app.name>deploytest-jenkins-1</app.name>
+		-->
+		<app.name>deploytest-jenkins-1</app.name> 
 		<tags/>
 		<categories>[]</categories>
 		<fields>[]</fields>
