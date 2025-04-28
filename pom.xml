@@ -42,16 +42,9 @@
 				<extensions>true</extensions>
 				<!-- add Runtime Manager Agent Deployment setting  start -->
 				<configuration>
-					<anypointPlatform>
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
-						<environment>${anypoint.environment}</environment>
-						<businessGroup>${anypoint.businessGroup}</businessGroup>
-					</anypointPlatform>
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>
 						<applicationName>${app.name}</applicationName>
-						<file>${project.build.directory}/${project.build.finalName}.jar</file>
 					</agentDeployment>  					
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
