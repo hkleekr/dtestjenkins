@@ -51,6 +51,7 @@
 					<agentDeployment>
 						<uri>${mule.deploy.uri}</uri>
 						<applicationName>${app.name}</applicationName>
+						<file>${project.build.directory}/${project.build.finalName}.jar</file>
 					</agentDeployment>  					
 				</configuration>
 				<!-- add Runtime Manager Agent Deployment setting  end -->
